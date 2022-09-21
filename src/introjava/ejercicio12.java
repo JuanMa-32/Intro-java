@@ -37,27 +37,25 @@ siguientes funciones de Java Substring(), Length(), equals().
         System.out.println("para terminar ingrese la secuencia FDE");
         System.out.println("--------------------------------------");
          String rs232 = "";
-         String salida = " ";
+         
          int correct = 0;
          int incorrect = 0;
         
         do{
              rs232 = leer.next();
-             if (rs232.equals("&&&&&")){
-                 salida = rs232;
-             }
+            
              int largo = rs232.length();
              String prim = rs232.substring(0,1);
              String ult = rs232.substring(largo-1, largo);
             if (largo==5 && prim.equals("X") && ult.equals("O")){
-                correct = correct+1;
-            } else if (salida.equals("&&&&&")){
+                correct  ++;
+            } else if (rs232.equals("&&&&&")){
                 
             }else{
-                incorrect = incorrect+1;
+                incorrect ++;
             }
              
-        }while (rs232!=salida);
+        }while (! rs232.equals("&&&&&"));
         System.out.println("-------------------------------------");
         System.out.println("INFORME");
         System.out.println("LECTURAS CORRECTAS: "+correct);
