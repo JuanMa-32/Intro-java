@@ -51,8 +51,9 @@ denota por AT y se obtiene cambiando sus filas por columnas (o viceversa).
         
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (matriz[i][j] != -matriz[j][i] )
-                    transpuesta=true;
+                if (matriz[i][j]+ matriz[j][i] !=0 ){
+                       transpuesta=true;
+                }       
             }
         }
         
@@ -78,6 +79,6 @@ denota por AT y se obtiene cambiando sus filas por columnas (o viceversa).
         }
         
         return transpuesta;
-    }
     
+    }
 }
